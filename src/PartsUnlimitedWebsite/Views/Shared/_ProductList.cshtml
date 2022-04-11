@@ -27,6 +27,10 @@ else
                             <div class="detail">
                                 <h4>@product.Title</h4>
                                 <h5>@product.Price.ToString("C")</h5>
+                                @if (product.CategoryId == 5)
+                                {
+                                    <h4>Discount @product.Discount</h4>
+                                }
                             </div>
                             <div class="mouse-over hidden-xs">
                                 <div class="image-second">
