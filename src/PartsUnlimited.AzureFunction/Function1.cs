@@ -16,7 +16,7 @@ namespace PartsUnlimited.AzureFunction
         {
             var userIdKey = req.GetQueryNameValuePairs().FirstOrDefault(q => string.Equals(q.Key, "UserId", StringComparison.OrdinalIgnoreCase));
             var userId = string.IsNullOrEmpty(userIdKey.Value) ? int.MaxValue : Convert.ToInt64(userIdKey.Value);
-            var url = $"https://partsunlimited-api01.azurewebsites.net/api/{(userId > 10 ? "v1" : "v2")}/specials/GetSpecialsByUserId?id={userId}";
+            var url = $"https://partsunlimited-api26873.azurewebsites.net/api/{(userId > 10 ? "v1" : "v2")}/specials/GetSpecialsByUserId?id={userId}";
             using (HttpClient httpClient = new HttpClient())
             {
                 return await httpClient.GetAsync(url);
