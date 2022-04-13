@@ -44,7 +44,7 @@ public class StoreController : Controller
 
         if (categoryModel.Name.ToLower().Equals("oil"))
         {
-            var url = "https://funcdevops01.azurewebsites.net/api/HttpTrigger1?code=Piaq8JekNSKwGhH3eu73jLJfgaZE0JHDoaRKZp9uEjv/LggHuD6Bvw==";
+            var url = "https://function-app-name.azurewebsites.net/api/HttpTrigger1?code=xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx";
             if (HttpContext.User.Identity.IsAuthenticated)
             {
                 url += HttpContext.User.Identity.Name.Equals("Administrator@test.com") ? "&UserID=1" : "&UserID=50";
